@@ -1,11 +1,11 @@
-import Link from 'next/Link';
-import Image from 'next/Image';
 import {Flex, Box, Text, Avatar} from '@chakra-ui/react';
 import {FaBed, FaBath} from 'react-icons/fa';
 import {BsGridFill} from 'react-icons/bs';
 import {GoVerified} from 'react-icons/go';
 import millify from 'millify';
 import DefaultImage from '../assets/images/house.jpg';
+import {Link} from 'next/link';
+import {Image} from 'next/image';
 
 export const Property = ({property: {externalID, title, coverPhoto, price, rentFrequency, rooms, baths, area, agency, isVerified}}) => (
 	<Link href={`/property/${externalID}`} passHref>
