@@ -4,8 +4,8 @@ import {BsGridFill} from 'react-icons/bs';
 import {GoVerified} from 'react-icons/go';
 import millify from 'millify';
 import DefaultImage from '../assets/images/house.jpg';
-import {Link} from 'next/link';
-import {Image} from 'next/image';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const Property = ({property: {externalID, title, coverPhoto, price, rentFrequency, rooms, baths, area, agency, isVerified}}) => (
 	<Link href={`/property/${externalID}`} passHref>
