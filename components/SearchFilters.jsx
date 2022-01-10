@@ -20,7 +20,11 @@ const SearchFilters = () => {
 		const values = getFilterValues(filterValues);
 
 		values.forEach(item => {
-			query[item.name] = item.value;
+			if (filterValues?.[item.name] && item.value) {
+				query[item.name] = item.value;
+			} else if (query[item.name] && query[item.name] !== '') {
+				delete query[item.name];
+			}
 		});
 
 		router.push({pathname, query});

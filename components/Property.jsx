@@ -11,7 +11,7 @@ export const Property = ({property: {externalID, title, coverPhoto, price, rentF
 	<Link href={`/property/${externalID}`} passHref>
 		<Flex flexWrap="wrap" w="420px" p="5" paddingTop="0" justifyContent="flex-start" cursor="pointer">
 			<Box>
-				<Image unoptimized src={coverPhoto ? coverPhoto.url : DefaultImage} alt="house" width={400} height={260} />
+				<Image src={coverPhoto ? coverPhoto.url : DefaultImage} alt="house" width={400} height={260} />
 			</Box>
 			<Box w="full">
 				<Flex paddingTop="2" alignItems="center" justifyContent="space-between">
@@ -20,7 +20,7 @@ export const Property = ({property: {externalID, title, coverPhoto, price, rentF
 						<Text fontWeight="bold" fontSize="lg">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
 					</Flex>
 					{agency?.logo?.url && <Box>
-						<Avatar unoptimized size="sm" src={agency.logo.url} />
+						<Avatar size="sm" src={agency.logo.url} />
 					</Box>}
 				</Flex>
 				<Flex alignItems="center" p="1" justifyContent="space-between" w="250px" color="blue.400">
