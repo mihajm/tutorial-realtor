@@ -25,8 +25,6 @@ const RightArrow = () => {
 };
 
 const ImageScrollBar = ({data}) => {
-	const tt = '';
-
 	if (!Array.isArray(data)) {
 		return (<></>);
 	}

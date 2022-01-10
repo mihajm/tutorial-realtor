@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Flex, Box} from '@chakra-ui/react';
 import {useRouter} from 'next/router';
 
@@ -9,6 +9,10 @@ import SearchFilter from './SearchFilter';
 const SearchFilters = () => {
 	const [filters, setFilters] = useState(filterData);
 	const router = useRouter();
+
+	useEffect(() => {
+		setFilters(filterData);
+	}, []);
 
 	const searchProperties = filterValues => {
 		const {pathname, query} = router;
