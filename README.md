@@ -6,4 +6,4 @@ You can find the original authors project here: https://github.com/adrianhajdin/
 The project uses next & chakra UI for its frontend ui & rapidAPI for mock data.
 # Deployment
 
-see project live: https://sharememjm.netlify.app/
+see project live: https://tutorial-realtor.vercel.app/
