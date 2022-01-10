@@ -19,7 +19,6 @@ const SearchFilters = () => {
 			query[item.name] = item.value;
 		});
 
-		console.log(query);
 		router.push({pathname, query});
 	};
 

@@ -19,7 +19,6 @@ export const Property = ({property: {externalID, title, coverPhoto, price, rentF
 						<Box paddingRight="3" color="green.400">{isVerified && <GoVerified />}</Box>
 						<Text fontWeight="bold" fontSize="lg">AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
 					</Flex>
-					{console.log(agency?.logo?.url)}
 					{agency?.logo?.url && <Box>
 						<Avatar unoptimized size="sm" src={agency.logo.url} />
 					</Box>}
